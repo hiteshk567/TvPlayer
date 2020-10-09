@@ -1,0 +1,16 @@
+.displayRow {
+    height: 600px;
+}
+
+label {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+select {
+    width: 35%;
+    height: 1.8rem;
+}
+
+
+/* //75 150 26 */

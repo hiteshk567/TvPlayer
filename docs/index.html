@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-3 videoInfo"></div>
+        <div class="col-6">
+          <label for="availableTvs">Choose from ----> </label>
+          <select onchange="changeTV()" name="tv" id="availableTvs">
+            <option value="">-----Available TV-------</option>
+            <option value="samsung">Samsung</option>
+            <option value="mi">MI</option>
+          </select>
+        </div>
+        <div class="col-3"></div>
+      </div>
+      <div class="row displayRow">
+        <div class="col-9">
+          <video id="video">
+            <source id="videoPlayer" src="" type="video/mp4" />
+          </video>
+        </div>
+        <div class="col-3">
+          <img
+            src="remote.PNG"
+            alt="remote image"
+            class="img-fluid"
+            usemap="#remoteMap"
+          />
+          <map name="remoteMap">
+            <!-- pause/play -->
+            <area
+              onclick="playVideo()"
+              id="play"
+              shape="circle"
+              coords="95, 192, 35"
+              href="#"
+            />
+            <!-- left -->
+            <area id="left" shape="circle" coords="40, 192, 13" href="#" />
+            <!-- right -->
+            <area id="right" shape="circle" coords="150, 192, 13" href="#" />
+            <!-- top -->
+            <area id="top" shape="circle" coords="95, 136, 13" href="#" />
+            <!-- bottom -->
+            <area id="bottom" shape="circle" coords="95, 246, 13" href="#" />
+            <!-- mute -->
+            <area id="reset" shape="circle" coords="95, 83, 15" href="#" />
+          </map>
+        </div>
+      </div>
+    </div>
+    <script src="script.js" async defer></script>
+  </body>
+</html>
